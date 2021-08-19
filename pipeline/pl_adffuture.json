@@ -1,14 +1,14 @@
 {
-	"name": "pl_test1",
+	"name": "pl_adffuture",
 	"properties": {
 		"activities": [
 			{
-				"name": "Wait 10 seconds",
+				"name": "Wait for 20 seconds",
 				"type": "Wait",
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
-					"waitTimeInSeconds": 10
+					"waitTimeInSeconds": 20
 				}
 			}
 		],
