@@ -1,0 +1,23 @@
+{
+	"name": "ds_blobnew1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blobconnection1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "UK_Sales.csv",
+				"container": "population1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
