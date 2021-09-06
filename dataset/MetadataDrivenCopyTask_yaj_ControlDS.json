@@ -1,0 +1,19 @@
+{
+	"name": "MetadataDrivenCopyTask_yaj_ControlDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "inputdb",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MetadataDrivenCopyTask_yaj_20210905"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"table": "MainControlTable_yaj"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
