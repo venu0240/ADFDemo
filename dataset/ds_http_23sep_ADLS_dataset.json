@@ -1,0 +1,32 @@
+{
+	"name": "ds_http_23sep_ADLS_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_HTTP_to_ADLS",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SinkURL": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().SinkURL",
+					"type": "Expression"
+				},
+				"fileSystem": "targettables"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

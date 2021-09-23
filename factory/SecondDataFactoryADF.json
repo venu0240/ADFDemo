@@ -1,0 +1,9 @@
+{
+	"name": "SecondDataFactoryADF",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "968fcd3f-f0c5-4c0e-a407-e896f590d3bc",
+		"tenantId": "ddaa648e-9fa0-4dd3-91fa-f50bffc2554a"
+	}
+}

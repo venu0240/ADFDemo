@@ -1,0 +1,43 @@
+{
+	"name": "pl_execute_method",
+	"properties": {
+		"activities": [
+			{
+				"name": "Execute databasr to BLOB",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_to_load_multiple_data_load_from_databse_to_blob",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Execute Pipelinefrom BLOB to ADSL",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Execute databasr to BLOB",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_retrivedata_blob_to_ADSL",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-09-23T04:03:21Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

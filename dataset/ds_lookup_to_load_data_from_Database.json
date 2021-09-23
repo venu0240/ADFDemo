@@ -1,0 +1,13 @@
+{
+	"name": "ds_lookup_to_load_data_from_Database",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_to_send_data_from_database_to_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
